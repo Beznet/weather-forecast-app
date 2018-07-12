@@ -1,0 +1,14 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "forecast weather for specified location",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bennett",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
