@@ -9,7 +9,8 @@ function findMode([array]) {
     var num = 0; 
     var max = 0;
  
- // loops over each number in the array and tallies up the // total count for each
+ // loops over each number in the array and tallies up the 
+ // total count for each
     for (i = 0; i < array.length; i ++) {
         num = array[i];
         count[num] = (count[num] || 0) + 1;
@@ -18,7 +19,8 @@ function findMode([array]) {
         }
     }
  
- //loops over the total count and stores the mode of the //array or multiple modes if their count's equal their //max frequency
+ //loops over the total count and stores the mode of the //array or multiple modes if their count's equal their 
+ //max frequency
     for (i in count)
         if (count.hasOwnProperty(i)) {
             if (count[i] === max) {
@@ -34,8 +36,6 @@ function findMean([array]){
   //a being the accmulated value and b being the current value
   return array.reduce((a, b) => a + b)/array.length;
 }
-
-//function for finding the Median of an array
 
 function findMedian(array) {
   //define median, set starting val to 0
@@ -61,14 +61,12 @@ function findMedian(array) {
     return median;
 }
 
+var port = process.env.PORT || 9090;
 
-app.listen(9090, () => {
-  console.log('Example app listening on port 9090!')
+app.listen(port, () => {
+  console.log(`Weather app listening on port ${port}`)
 });
-// function for finding the Mean of an array
 
-
-//function for finding the Mode(s) of an array
 
 // getData(function(data){
 // let array = new Array(data);
@@ -82,10 +80,4 @@ app.get('/', (req, res) => {
       retVal.median = findMedian(numbers)
       res.json(retVal)
   })
-  // res.json('Lafayette, LA 3 Day Weather Forecast-');
-  // res.json('findMean(array)'); 
-
-  // res.json('Tmperature Median:' + ' ' + findMedian(array) + ' '+ 'degrees');
-
-  // res.json('Temperature Mode(s):' + ' ' + findMode(array) + ' '+ 'degrees');
 });
