@@ -4,11 +4,16 @@
   "description": "forecast weather for specified location",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "author": "bennett",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "request": "^2.87.0"
+  },
+    "engines": {
+    "node": "10.5.0"
   }
 }
