@@ -38,7 +38,7 @@ function findMean([array]){
   return array.reduce((a, b) => a + b)/array.length;
 }
 
-function findMedian(array) {
+function findMedian([array]) {
   //define median, set starting val to 0
     var median = 0;
   //define the array's length (self-explanatory)  
