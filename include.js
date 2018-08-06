@@ -2,10 +2,10 @@
 
 const request = require('request');
 let apiKey = '5a6aa5428547dc809c54a7bf7d8576ba';
-let url = `http://api.openweathermap.org/data/2.5/forecast?lat=30.2240897&lon=-92.0198427000000&units=imperial&appid=${apiKey}`
 let temperature = new Array();
 
-const getData = function(callback) {
+const getData = function(city, country, callback) {
+let url = `http://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&units=imperial&appid=${apiKey}`
 request(url, function (err, response, body) {
   if(err){
     console.log('error:', error);

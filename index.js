@@ -81,4 +81,26 @@ app.get('/', (req, res) => {
       retVal.median = findMedian(numbers)
       res.json(retVal)
   })
+
 });
+
+app.get('/:city/:country', function (req, res) {
+    let retVal = {};
+    getData(req.params.city, req.params.country, function(data){
+      let numbers = [data];
+      retVal.mode = findMode(numbers)
+      retVal.mean = findMean(numbers)
+      retVal.median = findMedian(numbers)
+      res.json(retVal)
+  })
+
+
+});
+
+
+
+/* 
+
+getData(city, country, callback)
+
+*/
