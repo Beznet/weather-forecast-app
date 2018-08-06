@@ -74,7 +74,7 @@ app.listen(port, () => {
 
 app.get('/', (req, res) => {
   let retVal = {};
-  getData(function(data){
+  getData('seattle', 'us', function(data){
       let numbers = [data];
       retVal.mode = findMode(numbers)
       retVal.mean = findMean(numbers)
